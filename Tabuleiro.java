@@ -25,7 +25,7 @@ public class Tabuleiro {
 		// esté método irá definir quem é o jogador da vez
 	}
 	public boolean ganhou() {
-		// este método precisa de bastante cariho e atenção
+		// este método precisa de bastante carinho e atenção
 		// aqui deve fazer uma grande comparação das possíveis jogadas vencedoras e retornar verdadeiro se alguém ganhou
 		//por padrão está retornando false.		
 		return false;
