@@ -1,19 +1,53 @@
-import java.util.Scanner; //você pode utilizar o Scanner para interagir com o usuário, perguntando o nome dos jogadores antes de iniciar a partida
-import java.util.Random; //pode usar o random para sortear quem inicia, jogador 1 ou o 2;
-
+import java.util.Scanner;
+import java.util.Random;
 public class Partida {
-	/*
-	* você pode ter uma variável para controlar a vez de quem joga 1 ou 2 e alternar seu valor até o fim do jogo
-	* você precisa de um tabuleiro para iniciar uma partida
-	* também se faz necessário 2 jogadores, não é mesmo?
-	*/
-	
+	private Scanner scan;
+	private Jogador jogador1;
+	private Jogador jogador2;
+	private int controleJogada;
+	private Tabuleiro tabuleiro;
+
 	public Partida() {
-		// Aqui é o construtor, quando a partida for construida, você precisa definir quem está jogando além de fazer o necessário para rodar o jogo.
+		scan = new Scanner(System.in);
+		Random rnd = new Random();
+		int tmp = rnd.nextInt(2);
+		controleJogada = 2;
+		if (tmp<2) {
+			controleJogada = 1;
+		}
+		tabuleiro = new Tabuleiro();
+		System.out.println("Entre com o nome do Joagador X :");
+		String nome1 = scan.next();
+		this.jogador1 = new Jogador(nome1,"X");
+		System.out.println("Entre agora com o nome do Jogador O: ");
+		String nome2 = scan.next();
+		this.jogador2 = new Jogador(nome2,"O");
 	}
 
 	public void play() {
-		// aqui você faz o laço para que ambos joguem até que alguém acerte
+		tabuleiro.desenharTabuleiro();
+		while (!tabuleiro.ganhou() && tabuleiro.getNJogada()<9) {
+			if (controleJogada==1) {
+				controleJogada=2;
+				tabuleiro.setJogadorAtual(jogador1);
+			} else if (controleJogada==2) {
+				controleJogada=1;
+				tabuleiro.setJogadorAtual(jogador2);
+			}
+			System.out.printf("%s é a sua vez! informe o número do quadrante que deseja marcar!\r\n",tabuleiro.getJogadorAtual().getNome());
+			int num = scan.nextInt();
+			tabuleiro.jogar(num);
+			tabuleiro.desenharTabuleiro();
+			if  (tabuleiro.ganhou()) {
+				break;
+			}
+		}
+		if (tabuleiro.ganhou()) {
+			Jogador vencedor = tabuleiro.getJogadorAtual();
+			System.out.printf("%s você ganhou!!",vencedor.getNome());
+		} else {
+			System.out.println("Ninguém ganhou!");
+		}
 	}
 
 }
