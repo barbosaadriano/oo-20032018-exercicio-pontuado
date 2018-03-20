@@ -6,6 +6,7 @@ public class JogoDaVelha {
 		//o jogo inicia aqui
 		// você deve instanciar um objeto do tipo Partida 
 		// depois disso, se o usuário desejar, de o play no objeto partida para começar a brincadeira.
+				
 
 	}
 

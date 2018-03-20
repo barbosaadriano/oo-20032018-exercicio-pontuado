@@ -1,4 +1,4 @@
-#Jogo da Velha
+# Jogo da Velha
 ## Exercício valendo 2 pontos na média
 ### Regras e Instruções
 - O trabalho pode ser em Equipe (sugiro 2 equipes) a equipe pode ser montada como em outra aula que fizemos um trabalho com repositórios.
