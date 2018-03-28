@@ -18,3 +18,4 @@
 - Thaiza ()
 - Renato https://github.com/barbosaadriano/projeto-renato-trabalho
 - Thiago crestani https://github.com/Thiagohcrestani/oo-20032018-exercicio-pontuado
+- Gustavo https://github.com/Possatte/Trabalho-O.O
