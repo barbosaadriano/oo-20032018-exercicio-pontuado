@@ -1,12 +1,19 @@
-import java.util.Scanner; //utilize o scanner para interagir com o usuário
-
+import java.util.Scanner;
 public class JogoDaVelha {
 	
 	public static void main(String[] args) {
-		//o jogo inicia aqui
-		// você deve instanciar um objeto do tipo Partida 
-		// depois disso, se o usuário desejar, de o play no objeto partida para começar a brincadeira.
-				
+		Scanner scan = new Scanner(System.in);
+
+		while(true) {
+			Partida p = new Partida();
+			System.out.println("Partida configurada! pressione entre com 1 para jogar ou 0 para sair!");
+			int decisao = scan.nextInt();
+			if (decisao==0) {
+				System.out.println("encerrando o jogo!");
+				break;
+			}
+			p.play();
+		}
 
 	}
 
