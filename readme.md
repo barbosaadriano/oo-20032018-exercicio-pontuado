@@ -15,7 +15,7 @@
 - Halisson https://github.com/alissonhs/Aulas-PROG.git
 - Érica https://github.com/EricaOlmo/JogoDaVelha
 - Tallys https://github.com/thallyscalory/oo-20032018-exercicio-pontuado
-- Thaiza ()
+- Thaiza (https://github.com/Luna-Izah/JogoDaVelha.git)
 - Renato https://github.com/barbosaadriano/projeto-renato-trabalho
 - Thiago crestani https://github.com/Thiagohcrestani/oo-20032018-exercicio-pontuado
 - Gustavo https://github.com/Possatte/Trabalho-O.O
